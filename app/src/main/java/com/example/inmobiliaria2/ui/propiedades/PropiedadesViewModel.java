@@ -1,14 +1,14 @@
-package com.example.inmobiliaria2.ui.share;
+package com.example.inmobiliaria2.ui.propiedades;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ShareViewModel extends ViewModel {
+public class PropiedadesViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public ShareViewModel() {
+    public PropiedadesViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is share fragment");
     }

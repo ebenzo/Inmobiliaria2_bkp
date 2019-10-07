@@ -1,16 +1,16 @@
-package com.example.inmobiliaria2.ui.send;
+package com.example.inmobiliaria2.ui.pagos;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SendViewModel extends ViewModel {
+public class PagosViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public SendViewModel() {
+    public PagosViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is send fragment");
+        mText.setValue("This is pagos fragment");
     }
 
     public LiveData<String> getText() {

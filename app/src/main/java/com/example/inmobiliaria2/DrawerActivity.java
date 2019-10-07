@@ -1,5 +1,6 @@
 package com.example.inmobiliaria2;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -12,11 +13,12 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.inmobiliaria2.ui.propiedades.PropFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
-public class DrawerActivity extends AppCompatActivity {
+public class DrawerActivity extends AppCompatActivity implements PropFragment.OnFragmentInteractionListener {
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
@@ -39,8 +41,8 @@ public class DrawerActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_inquilinos, R.id.nav_pagos,
-                R.id.nav_contratos, R.id.nav_perfil, R.id.nav_propiedades,
+                R.id.nav_perfil, R.id.nav_inquilinos, R.id.nav_pagos,
+                R.id.nav_contratos, R.id.nav_propiedades,
                 R.id.nav_sesion)
                 .setDrawerLayout(drawer)
                 .build();
@@ -62,5 +64,10 @@ public class DrawerActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }
