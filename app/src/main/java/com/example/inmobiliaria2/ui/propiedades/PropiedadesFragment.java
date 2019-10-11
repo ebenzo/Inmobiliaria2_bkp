@@ -36,27 +36,15 @@ public class PropiedadesFragment extends Fragment implements PropFragment.OnFrag
     private TabLayout tabLayout;
     private AppBarLayout appBarLayout;
 
-    Spinner spinnerTipoProp;
-    String[] strTipoProp;
-    List<String> listaTipo;
-    ArrayAdapter<String> comboAdapter;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         propiedadesViewModel =
                 ViewModelProviders.of(this).get(PropiedadesViewModel.class);
         View root = inflater.inflate(R.layout.fragment_propiedades, container, false);
         final TextView textView = root.findViewById(R.id.text_share);
-        /*propiedadesViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });*/
 
 
-
-        viewPager = root.findViewById(R.id.viewPage);
+        viewPager = root.findViewById(R.id.viewPageProp);
         appBarLayout = root.findViewById(R.id.appBar);
 
         tabLayout = new TabLayout(getContext());
@@ -78,6 +66,7 @@ public class PropiedadesFragment extends Fragment implements PropFragment.OnFrag
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 //Toast.makeText(getContext(), tab.getText(), Toast.LENGTH_LONG).show();
+                String s = "hola";
             }
 
             @Override
@@ -87,7 +76,7 @@ public class PropiedadesFragment extends Fragment implements PropFragment.OnFrag
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
+                String s = "hola";
             }
         });
 
@@ -123,6 +112,13 @@ public class PropiedadesFragment extends Fragment implements PropFragment.OnFrag
             fragmentList.add(fragment);
             titulosFragment.add(titulo);
         }
+
+        @Override
+        public int getItemPosition(Object object) {
+            String a = "Hola";
+            return POSITION_NONE;
+        }
+
     }
 
     @Override

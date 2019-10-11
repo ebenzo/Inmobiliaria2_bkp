@@ -25,7 +25,7 @@
         android:theme="@style/AppTheme"/>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPage"
+        android:id="@+id/viewPageProp"
         android:layout_width="match_parent"
         android:layout_height="732dp"
         android:layout_below="@+id/appBar"

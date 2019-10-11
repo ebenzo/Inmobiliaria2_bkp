@@ -125,6 +125,8 @@ public class PropFragment extends Fragment {
         comboAdapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_item, listaTipo);
         //Cargo el spinner con los datos
         spinnerTipoProp.setAdapter(comboAdapter);
+        spinnerTipoProp.setEnabled(false);
+        spinnerTipoProp.setClickable(false);
     }
 
     private void cargarSpinnerUsos(View root) {
@@ -145,6 +147,8 @@ public class PropFragment extends Fragment {
         comboAdapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_item, listaUso);
         //Cargo el spinner con los datos
         spinnerUsoProp.setAdapter(comboAdapter);
+        spinnerUsoProp.setEnabled(false);
+        spinnerUsoProp.setClickable(false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

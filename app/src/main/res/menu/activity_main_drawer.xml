@@ -10,19 +10,19 @@
             android:title="@string/menu_perfil" />
         <item
             android:id="@+id/nav_propiedades"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/icons8_house"
             android:title="@string/menu_propiedades" />
         <item
             android:id="@+id/nav_inquilinos"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/icons8_profile"
             android:title="@string/menu_inquilinos" />
         <item
             android:id="@+id/nav_pagos"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/icons8_money"
             android:title="@string/menu_pagos" />
         <item
             android:id="@+id/nav_contratos"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/icons8_paper"
             android:title="@string/menu_contratos" />
     </group>
 
@@ -30,7 +30,7 @@
         <menu>
             <item
                 android:id="@+id/nav_sesion"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/icons8_close"
                 android:title="@string/menu_sesion" />
         </menu>
     </item>

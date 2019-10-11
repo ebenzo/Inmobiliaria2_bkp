@@ -25,9 +25,9 @@
 
     <fragment
         android:id="@+id/nav_contratos"
-        android:name="com.example.inmobiliaria2.ui.slideshow.SlideshowFragment"
+        android:name="com.example.inmobiliaria2.ui.contratos.ContratosFragment"
         android:label="@string/menu_contratos"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_contratos" />
 
     <fragment
         android:id="@+id/nav_propiedades"

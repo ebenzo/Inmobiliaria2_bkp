@@ -50,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
             if (email.getText().toString().equals("emma") && password.getText().toString().equals("123")) {
                 Intent i = new Intent(getApplicationContext(), DrawerActivity.class);
                 //le llevo todos los parametros que va a usar la vista
-                i.putExtra("email", email.getText().toString());
+                i.putExtra("email", "benzoemma@gmail.com");
+                i.putExtra("nombre", email.getText().toString());
                 startActivity(i);
             }
             else {

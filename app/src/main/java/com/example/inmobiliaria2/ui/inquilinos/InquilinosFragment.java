@@ -31,12 +31,7 @@ public class InquilinosFragment extends Fragment {
                 ViewModelProviders.of(this).get(InquilinosViewModel.class);
         View root = inflater.inflate(R.layout.fragment_inquilinos, container, false);
         final TextView textView = root.findViewById(R.id.text_gallery);
-        /*inquilinosViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });*/
+
         textView.setText("Lista Inquilinos");
 
         cargarDatos();

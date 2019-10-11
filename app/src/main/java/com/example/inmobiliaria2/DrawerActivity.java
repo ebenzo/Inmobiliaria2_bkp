@@ -1,9 +1,12 @@
 package com.example.inmobiliaria2;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -21,6 +24,7 @@ import com.google.android.material.snackbar.Snackbar;
 public class DrawerActivity extends AppCompatActivity implements PropFragment.OnFragmentInteractionListener {
     private AppBarConfiguration mAppBarConfiguration;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +41,17 @@ public class DrawerActivity extends AppCompatActivity implements PropFragment.On
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        ModelosInmobiliaria.setNavigationView(navigationView);
+
+        //Setea datos principales del prop en el header del navigationView
+        View header = navigationView.getHeaderView(0);
+        Intent x = getIntent();
+        String emailProp = x.getStringExtra("email");
+        String nombreProp = x.getStringExtra("nombre");
+        TextView nombre = header.findViewById(R.id.headerNombreProp);
+        TextView email = header.findViewById(R.id.headerEmailProp);
+        email.setText(emailProp);
+        nombre.setText(nombreProp);
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
