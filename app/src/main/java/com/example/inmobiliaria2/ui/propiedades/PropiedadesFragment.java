@@ -45,9 +45,9 @@ public class PropiedadesFragment extends Fragment implements PropFragment.OnFrag
 
 
         viewPager = root.findViewById(R.id.viewPageProp);
-        appBarLayout = root.findViewById(R.id.appBar);
-
-        tabLayout = new TabLayout(getContext());
+        appBarLayout = root.findViewById(R.id.appBarPropTab);
+        //getActivity()
+        tabLayout = new TabLayout(root.getContext());
 
         appBarLayout.addView(tabLayout);
 
@@ -66,7 +66,7 @@ public class PropiedadesFragment extends Fragment implements PropFragment.OnFrag
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 //Toast.makeText(getContext(), tab.getText(), Toast.LENGTH_LONG).show();
-                String s = "hola";
+
             }
 
             @Override
@@ -76,7 +76,7 @@ public class PropiedadesFragment extends Fragment implements PropFragment.OnFrag
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-                String s = "hola";
+
             }
         });
 
@@ -115,7 +115,7 @@ public class PropiedadesFragment extends Fragment implements PropFragment.OnFrag
 
         @Override
         public int getItemPosition(Object object) {
-            String a = "Hola";
+
             return POSITION_NONE;
         }
 
@@ -123,6 +123,6 @@ public class PropiedadesFragment extends Fragment implements PropFragment.OnFrag
 
     @Override
     public void onFragmentInteraction(Uri uri) {
-        String s = "hola";
+
     }
 }
